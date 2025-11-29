@@ -135,6 +135,6 @@ async def create_account(request: CreateAccountRequest):
         if user_data["phone_number"] == request.phone_number:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Phone number already registered")
 
-    users_db[request.username] = {"pin": request.pin, "balance": 0, "phone_number": request.phone_number}
+    users_db[request.username] = {"pin": request.pin, "balance": 1000, "phone_number": request.phone_number}
     save_users_db()
-    return {"message": f"Account for {request.username} created successfully with an initial balance of 0"}
+    return {"message": f"Account for {request.username} created successfully with an initial balance of 1000", "username": request.username, "pin": request.pin}

@@ -18,5 +18,15 @@
         "pin": "0004",
         "balance": 0,
         "phone_number": "0314"
+    },
+    "John": {
+        "pin": "0005",
+        "balance": 1000,
+        "phone_number": "2585"
+    },
+    "john": {
+        "pin": "0006",
+        "balance": 1000,
+        "phone_number": "0180"
     }
 }
